@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
         puts("\n\t\t\t\tEDITOR DE LISTAS\n");
         puts("\t1  - EXIBIR LISTA\n\t2  - INSERIR UM ELEMENTO\n\t0  - SAIR");
         printf("\nINFORME SUA OPCAO:\n");
-        scanf("%d", &op);//Escolha da Opção
+        scanf("%d", &op);//Escolha da Opï¿½ï¿½o
         
     	switch(op)
         	{
@@ -27,10 +27,10 @@ int main(int argc, char const *argv[]) {
 				
 				case 2:{	                
 	                printf("Informe o cpf: \n");
-	                scanf("%d", &cliente.cpf);
+	                scanf("%s", &cliente.cpf);
 	                
 	                printf("Informe um nome: \n");
-	                scanf("%d", &cliente.nome);
+	                scanf("%s", &cliente.nome);
 
 	                printf("Informe um ENDERECO: \n");
 					scanf("%s", &cliente.endereco);
@@ -39,7 +39,7 @@ int main(int argc, char const *argv[]) {
 	                inserir(&L,hash, cliente);
 					break;
 				}
-        	// TODO - Outra opção nao oferecida
+        	// TODO - Outra opï¿½ï¿½o nao oferecida
     		default:
     			puts("OPCAO INCORRETA,TENTAR NOVAMENTE.");
 				break;

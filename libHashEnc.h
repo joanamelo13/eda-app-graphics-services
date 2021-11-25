@@ -5,8 +5,8 @@
 #define MAX 23
 struct cliente{
 	int cpf; //chave = cpf
-	int nome;
-	char *endereco[40];
+	char *nome[80];
+	char *endereco[80];
 };
 
 typedef struct cliente Tcliente; //antes era Tdado.

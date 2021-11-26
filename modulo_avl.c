@@ -48,23 +48,23 @@ void menu(){
 }
 
 int altura_AVL(Tno *a){
-    int alt_esq=0, alt_dir=0;
-    if (a == NULL)
-        return 0;
-    else{
-        alt_esq = altura_AVL(a->esq);
-        alt_dir = altura_AVL(a->dir);
-        if (alt_esq > alt_dir)
-            return (1 + alt_esq);
-        else
-            return (1 + alt_dir);
-    }
+  int alt_esq=0, alt_dir=0;
+  if (a == NULL)
+    return 0;
+  else{
+    alt_esq = altura_AVL(a->esq);
+    alt_dir = altura_AVL(a->dir);
+    if (alt_esq > alt_dir)
+      return (1 + alt_esq);
+    else
+      return (1 + alt_dir);
+  }
 }
 
 
 
 int calcula_FB(Tno *a){
-    return (altura_AVL(a->esq) - altura_AVL(a->dir));
+  return (altura_AVL(a->esq) - altura_AVL(a->dir));
 }
 
 Tno* rotacao_simples_esquerda(Tno* a){
@@ -143,19 +143,19 @@ Tno* inserir(Tno* a, int elemento){
 }
 
 void imprime(Tno* a){
-    if (a == NULL){
+  if (a == NULL){
 		return;
 	}
-    printf("%d",a->elemento);
+  printf("%d",a->elemento);
  
-    if(a->esq != NULL)
-        printf("(E:%d)",a->esq->elemento);
-    if(a->dir != NULL)
-        printf("(D:%d)",a->dir->elemento);
-    printf("\n");
+  if(a->esq != NULL)
+    printf("(E:%d)",a->esq->elemento);
+  if(a->dir != NULL)
+    printf("(D:%d)",a->dir->elemento);
+  printf("\n");
  
-    imprime(a->esq);
-    imprime(a->dir);
+  imprime(a->esq);
+  imprime(a->dir);
 }
 
 

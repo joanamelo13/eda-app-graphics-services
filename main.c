@@ -20,14 +20,13 @@ int main(int argc, char const *argv[]) {
     	switch(op)
         {
 			case 1:{
-				printf("case 1");
-				//exibir(L);
+				exibir(L);
 				break;
 			}
 			
 			case 2:{	                
 				printf("Informe o cpf: \n");
-				scanf("%s", &cliente.cpf);
+				scanf("%d", &cliente.cpf);
 				
 				printf("Informe um nome: \n");
 				scanf("%s", &cliente.nome);

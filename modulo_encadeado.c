@@ -24,6 +24,27 @@ int inserir(TListaCliente *L, int hash, Tcliente cliente){
 	}	
 }
 
+void exibir(TListaCliente L){
+    Tno aux;
+    int i;
+    if(L.n!=0){
+        for(i=0;i<MAX;i++){
+            if(L.elemento[i]!=NULL){
+                printf("-------------i = %d --------------\n", i);
+                aux =L.elemento[i];
+                while(aux!=NULL){
+                    printf("cpf = %d\n", L.elemento[i]->cliente.cpf);
+                    printf("nome = %s\n\n", L.elemento[i]->cliente.nome);
+                    printf("endereco = %s\n\n", L.elemento[i]->cliente.endereco);
+                    aux = aux->proximo;
+                }
+            }
+        }
+    }
+    else
+        printf("tabela vazia");
+}
+
 int hashing(int cpf){
 	int h = 0;
 	h = cpf % MAX;
